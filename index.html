@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+
+<title>Angular Dual Multiselect Directive</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link rel="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css">
+<link rel="stylesheet" href="assets/demo.css">
+<link rel="stylesheet" href="assets/dualmultiselect.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+<body ng-app="demo">
+	<div class="container" ng-controller="DemoController">
+
+		<div class="page-header">
+			<h2>Angular Dual MultiSelect Directive Demo</h2>
+			<ul>
+				<li><a href="https://github.com/alexklibisz/angular-dual-multiselect-directive">View on GitHub</a></li>
+				<li><a href="http://alexklibisz.github.io">Developed by Alex Klibisz</a></li>
+			</ul>
+		</div>
+
+		<p class="lead"><em>Filter, select, go.</em></p>
+		<p>The Angular Simple Dual Multiselect Directive makes it easy to quickly create a pair of searchable
+			"All" and "Selected" fields for choosing multiple options from a large set of values.</p>
+		<hr/>
+
+		<div class="demo">
+			<!-- HERE IT IS -->
+			<dualmultiselect options="demoOptions">
+			</dualmultiselect>
+			<!-- THAT'S IT -->
+		</div> 		
+		<hr/>
+
+		<h3>Dependencies</h3>
+		<ul>
+			<li>AngularJS: https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular.min.js</li>
+			<li>Bootstrap (CSS): http://getbootstrap.com/getting-started/#download</li>
+		</ul>
+		<hr/>
+		
+		<a name="usage"></a>
+		<div ng-include="'UsagePartial.html'"></div>
+		<hr/>
+
+		<h3>License</h3>
+		<p><a href="http://www.wtfpl.net/">WTFPL License</a></p>
+		<hr/>
+
+		<p>Developed by <a href="http://alexklibisz.github.io">Alex Klibisz</a></p>
+	</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular.min.js"></script>
+<script src="assets/app.js"></script>
+<script src="assets/DemoController.js"></script>
+<script src="assets/dualmultiselect.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+
+
+
+</body>
+</html>
