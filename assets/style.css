@@ -1,14 +1,12 @@
-/* Styles go here */
-
-.sms label {
+.dualmultiselect label {
   margin: 10px;
 }
 
-.sms .btn {
+.dualmultiselect .btn {
   margin: 10px;
 }
 
-.sms .pool {
+.dualmultiselect .pool {
   border: 1px solid #999;
   border-radius: 4px;
   padding: 10px;
@@ -17,17 +15,17 @@
   overflow-y: scroll;
 }
 
-.sms .pool ul {
+.dualmultiselect .pool ul {
   list-style: none;
   padding-left: 0px;
 }
 
-.sms .pool ul li {
+.dualmultiselect .pool ul li {
   width: 100%;
   padding: 4px 8px 4px 4px;
   border-bottom: 1px dotted #CFCFCF;
 }
 
-.sms .pool ul li a:hover {
+.dualmultiselect .pool ul li a:hover {
   text-decoration: none;
 }
