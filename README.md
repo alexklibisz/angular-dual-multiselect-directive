@@ -4,6 +4,9 @@
 
 The Angular Dual Multiselect Directive makes it easy to quickly create a pair of searchable fields for selecting multiple options from a large set of values.  
 
+![Screenshot](https://raw.githubusercontent.com/alexklibisz/angular-dual-multiselect-directive/gh-pages/assets/demo.png)
+
+
 ###Dependencies
 - AngularJS (angular.min.js) (tested with 1.3.13 and 1.4.0-beta.1)
 - Bootstrap (at least the CSS)
