@@ -33,7 +33,7 @@
       </button>
       <div class="pool">
         <ul>
-          <li ng-repeat="item in options.selectedItems | filter: searchTerm | orderBy: options.orderProperty">
+          <li ng-repeat="item in options.selectedItems | orderBy: options.orderProperty">
             <a href="" ng-click="transfer(options.selectedItems, options.items, options.selectedItems.indexOf(item))">
             &lArr;&nbsp;{{item.name}}
           </a>
