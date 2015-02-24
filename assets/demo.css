@@ -1,0 +1,8 @@
+.page-header ul{
+    list-style-type: none;
+}
+
+.page-header ul li {
+	display: inline;
+	margin-right: 15px;
+}

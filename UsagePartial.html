@@ -1,0 +1,27 @@
+<h3>Usage</h3>
+
+		<h4>Include the CSS and JS files. Make sure Angular and your app.js files are included first.</h4>
+		<pre><code class="html">
+&lt;link rel="stylesheet" href="assets/dualmultiselect.css"&gt;
+&lt;script src="assets/dualmultiselect.js"&gt;&lt;/script&gt;
+		</code></pre>
+
+		<h4>Add the directive tag in your HTML:</h4>
+		<pre><code class="html">&lt;dualmultiselect options="demoOptions"&gt; &lt;/dualmultiselect&gt;</code></pre>
+
+		<h4>Add/customize this set of options as an object in your controller scope. (Note the comments)</h4>
+		<pre><code class="js">
+$scope.demoOptions = {
+	title: 'Demo: Recent World Cup Winners',
+	filterPlaceHolder: 'Start typing to filter the lists below.',
+	labelAll: 'All Items',
+	labelSelected: 'Selected Items',
+	helpMessage: ' Click items to transfer them between fields.',
+	/* angular will use this to filter your lists */
+	orderProperty: 'name',
+	/* this contains the initial list of all items (i.e. the left side) */
+	items: [{'id': '50', 'name': 'Germany'}, {'id': '45', 'name': 'Spain'}, {'id': '66', 'name': 'Italy'}, {'id': '30', 'name' : 'Brazil' }, {'id': '41', 'name': 'France' }, {'id': '34', 'name': 'Argentina'}],
+	/* this list should be initialized as empty or with any pre-selected items */
+	selectedItems: [] 
+};	
+		</code></pre>
