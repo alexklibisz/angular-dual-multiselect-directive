@@ -1,29 +1,23 @@
-<html>
+<html lang="en">
 <head>
 
 <title>Angular Dual Multiselect Directive</title>
 
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/style.css">
 
 
 </head>
 <body ng-app="demo">
-
-	<div class="container" ng-controller"DemoController">
+	<div class="container" ng-controller="DemoController">
 
 		<div class="page-header">
 			<h2>Angular Dual MultiSelect Directive Demo</h2>
 			<p><a href="https://github.com/alexklibisz/angular-dual-multiselect-directive">GitHub</a></p>
 		</div>
-
-		Your name:
-		    <input type="text" ng-model="username">
-		    <button ng-click='sayHello()'>greet</button>
-		  <hr>
-		  {{greeting}}
-
-		<dualmultiselect options="demoOptions">
+		  
+ 		<dualmultiselect options="demoOptions">
 		</dualmultiselect>
 
 		<hr/>
@@ -31,7 +25,6 @@
 	</div>
 
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.1/angular.min.js"></script>
-
 <script src="assets/app.js"></script>
 <script src="assets/DemoController.js"></script>
 <script src="assets/dual-multiselect-directive.js"></script>

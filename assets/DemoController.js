@@ -1,7 +1,12 @@
-demo.controller('DemoController', ['$scope', function($scope) {
-  $scope.username = 'World';
+demo.controller('DemoController',  function($scope, $location) {
 
-  $scope.sayHello = function() {
-    $scope.greeting = 'Hello ' + $scope.username + '!';
-  };
-}]);
+	$scope.demoOptions = {
+		title: 'Test',
+		filterPlaceHolder: 'Start typing to filter the lists below.',
+		labelAll: 'All Items',
+		labelSelected: 'Selected Items',
+		items: [{"id": "50", "name": "Germany"}, {"id": "45", "name": "Spain"}, {"id": "66", "name": "Italy"}, {"id": "30", "name" : "Brazil" }, {"id": "41", "name": "France" }],
+		selectedItems: [] 
+	};
+
+}); //  StaticPageController
