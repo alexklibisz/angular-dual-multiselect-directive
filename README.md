@@ -1,4 +1,4 @@
-# angular-dual-multiselect-directive
+# Angular Dual Multiselect Directive
 
 ###*Filter, select, go*
 
