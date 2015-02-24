@@ -1,8 +1,7 @@
-demo.controller('DemoController',
-	function($scope) {
-		$scope.demoOptions = {
+demo.controller('DemoController', ['$scope', function($scope) {
+  $scope.username = 'World';
 
-		};
-		$scope.foo = "bar";
-	}
-);
+  $scope.sayHello = function() {
+    $scope.greeting = 'Hello ' + $scope.username + '!';
+  };
+}]);

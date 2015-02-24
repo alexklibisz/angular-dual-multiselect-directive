@@ -1,3 +1,3 @@
-var demo = angular.module('demo', ['dualmultiselect']);
+var demo = angular.module('demo', []);
 
 var appControllers = angular.module('appControllers',[]);
