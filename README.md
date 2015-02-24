@@ -1,9 +1,7 @@
 # Angular Dual Multiselect Directive
 
-This is the gh-pages branch, used for the demo page: http://alexklibisz.github.io/angular-dual-multiselect-directive/  
 
-To view the latest source, go to the master branch.
-=======
+###*Filter, select, go!*
 The Angular Dual Multiselect Directive makes it easy to quickly create a pair of searchable fields for selecting multiple options from a large set of values.  
 
 ![Screenshot](https://raw.githubusercontent.com/alexklibisz/angular-dual-multiselect-directive/gh-pages/assets/demo.png)
