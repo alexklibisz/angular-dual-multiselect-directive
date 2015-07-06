@@ -14,6 +14,7 @@ The Angular Dual Multiselect Directive makes it easy to quickly create a pair of
 ###Demo
 - http://alexklibisz.github.io/angular-dual-multiselect-directive/
 - Source for this demo is in the gh-pages branch.
+- This directive is also implemented for a project I completed called MPMAP ![here](http://mpmap.mappingpiracy.net/#/map).
 
 ###Usage
 
@@ -45,6 +46,10 @@ $scope.demoOptions = {
 	selectedItems: [] 
 };	
 ```
+
+####TODO
+
+- Pressing enter key automatically moves the top item in the "all" pool over to the "selected" pool.
 
 ####License
 [WTFPL License](http://www.wtfpl.net/)
