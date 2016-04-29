@@ -3,8 +3,9 @@ Created by Alex Klibisz, aklibisz@utk.edu
 February 2015
 */
 
-var a;
-a = angular.module("dualmultiselect", []), a.directive("dualmultiselect", [function() {
+angular.module("dualmultiselect", [])
+
+.directive("dualmultiselect", [function() {
 	return {
 		restrict: 'E',
 		scope: {
@@ -23,6 +24,19 @@ a = angular.module("dualmultiselect", []), a.directive("dualmultiselect", [funct
 				}
 			};
 		},
-		template: '<div class="dualmultiselect"> <div class="row"> <div class="col-lg-12 col-md-12 col-sm-12"> <h4>{{options.title}}<small>&nbsp;{{options.helpMessage}}</small> </h4> <input class="form-control" placeholder="{{options.filterPlaceHolder}}" ng-model="searchTerm"> </div></div><div class="row"> <div class="col-lg-6 col-md-6 col-sm-6"> <label>{{options.labelAll}}</label> <button type="button" class="btn btn-default btn-xs" ng-click="transfer(options.items, options.selectedItems, -1)"> Select All </button> <div class="pool"> <ul> <li ng-repeat="item in options.items | filter: searchTerm | orderBy: options.orderProperty"> <a href="" ng-click="transfer(options.items, options.selectedItems, options.items.indexOf(item))">{{item.name}}&nbsp;&rArr; </a> </li></ul> </div></div><div class="col-lg-6 col-md-6 col-sm-6"> <label>{{options.labelSelected}}</label> <button type="button" class="btn btn-default btn-xs" ng-click="transfer(options.selectedItems, options.items, -1)"> Deselect All </button> <div class="pool"> <ul> <li ng-repeat="item in options.selectedItems | orderBy: options.orderProperty"> <a href="" ng-click="transfer(options.selectedItems, options.items, options.selectedItems.indexOf(item))"> &lArr;&nbsp;{{item.name}}</a> </li></ul> </div></div></div></div>'
+		templateUrl: function(elem, attr) { return attr.hasOwnProperty('dmsMd') ? 'material' : 'bootstrap'; }
 	};
+}])
+
+.run(['$templateCache', function($templateCache) {
+  	'use strict';
+
+	$templateCache.put('bootstrap',
+		'<div class="dualmultiselect dualmultiselect-bootstrap"> <div class="row"> <div class="col-lg-12 col-md-12 col-sm-12"> <h4 ng-if="options.title">{{options.title}}<small>&nbsp;{{options.helpMessage}}</small> </h4> <input ng-if="options.minItemsForFilter == undefined || options.items.length >= options.minItemsForFilter" class="form-control" placeholder="{{options.filterPlaceHolder}}" ng-model="searchTerm"> </div></div><div class="row"> <div class="col-lg-6 col-md-6 col-sm-6"> <label>{{options.labelAll}}</label> <button type="button" class="btn btn-default btn-xs {{options.buttonClass}}" ng-if="!options.hideSelectAllButtons" ng-click="transfer(options.items, options.selectedItems, -1)"> Select All </button> <div class="pool {{options.listBoxClass}}"> <ul> <li ng-repeat="item in options.items | filter: searchTerm | orderBy: options.orderProperty"> <a href="" ng-click="transfer(options.items, options.selectedItems, options.items.indexOf(item))">{{item.name}}&nbsp;&rArr; </a> </li></ul> </div></div><div class="col-lg-6 col-md-6 col-sm-6"> <label>{{options.labelSelected}}</label> <button type="button" class="btn btn-default btn-xs{{options.buttonClass}}" ng-if="!options.hideSelectAllButtons" ng-click="transfer(options.selectedItems, options.items, -1)"> Deselect All </button> <div class="pool {{options.listBoxClass}}"> <ul> <li ng-repeat="item in options.selectedItems | orderBy: options.orderProperty"> <a href="" ng-click="transfer(options.selectedItems, options.items, options.selectedItems.indexOf(item))"> &lArr;&nbsp;{{item.name}}</a> </li></ul> </div></div></div></div>'
+	);
+
+	$templateCache.put('material',
+    	'<div class="dualmultiselect dualmultiselect-md"> <div layout="row"> <div> <h4 ng-if="options.title">{{options.title}}<small>&nbsp;{{options.helpMessage}}</small> </h4> <input ng-if="(options.minItemsForFilter?options.minItemsForFilter:0) <= options.items.length" placeholder="{{options.filterPlaceHolder}}" ng-model="searchTerm"> </div></div><div layout="row" layout-xs="column"> <div flex layout="column" class="dms-itemslist"> <div layout="row" layout-align="start center" layout-padding> <label>{{options.labelAll}}</label> <md-button class="{{options.buttonClass}}" ng-if="!options.hideSelectAllButtons" ng-click="transfer(options.items, options.selectedItems, -1)"> Select All </md-button> </div><div class="{{options.listBoxClass}}"> <ul> <li ng-repeat="item in options.items | filter: searchTerm | orderBy: options.orderProperty"> <a href="" ng-click="transfer(options.items, options.selectedItems, options.items.indexOf(item))">{{item.name}}&nbsp;&rArr; </a> </li></ul> </div></div><div flex layout="column" class="dms-itemslist"> <div layout="row" layout-align="start center" layout-padding> <label>{{options.labelSelected}}</label> <md-button class="{{options.buttonClass}}" ng-if="!options.hideSelectAllButtons" ng-click="transfer(options.selectedItems, options.items, -1)"> Deselect All </md-button> </div><div class="{{options.listBoxClass}}"> <ul> <li ng-repeat="item in options.selectedItems | orderBy: options.orderProperty"> <a href="" ng-click="transfer(options.selectedItems, options.items, options.selectedItems.indexOf(item))"> &lArr;&nbsp;{{item.name}}</a> </li></ul> </div></div></div></div>'
+	);
 }]);
+
