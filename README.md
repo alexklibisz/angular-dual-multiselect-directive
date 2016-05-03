@@ -9,7 +9,7 @@ The Angular Dual Multiselect Directive makes it easy to quickly create a pair of
 
 ###Dependencies
 - AngularJS (angular.min.js) (tested with 1.3.13 and 1.4.0-beta.1)
-- Bootstrap (at least the CSS)
+- Bootstrap (at least the CSS), or Angular Material
 
 ###Demo
 - http://alexklibisz.github.io/angular-dual-multiselect-directive/
@@ -24,9 +24,9 @@ The Angular Dual Multiselect Directive makes it easy to quickly create a pair of
 <script src="assets/dualmultiselect.js"></script>
 ```
 
-####Add the directive tag in your HTML.
+####Add the directive tag in your HTML. Include attribute 'dms-md' to select a Material Design template over Bootstrap.
 ```html
-<dualmultiselect options="demoOptions"> </dualmultiselect>
+<dualmultiselect dms-md options="demoOptions"> </dualmultiselect>
 ```
 
 ####Add/customize this set of options as an object in your controller scope.
@@ -43,7 +43,15 @@ $scope.demoOptions = {
 	/* this contains the initial list of all items (i.e. the left side) */
 	items: [{'id': '50', 'name': 'Germany'}, {'id': '45', 'name': 'Spain'}, {'id': '66', 'name': 'Italy'}, {'id': '30', 'name' : 'Brazil' }, {'id': '41', 'name': 'France' }, {'id': '34', 'name': 'Argentina'}],
 	/* this list should be initialized as empty or with any pre-selected items */
-	selectedItems: [] 
+	selectedItems: [],
+	/* this only displays the filter box if at least the specified number of items are present in the available list (default: 0) */
+	minItemsForFilter: 3,
+	/* this applies CSS classes to the Select/Deselect All buttons */
+        buttonClass: 'md-accent md-raised',
+	/* this applies CSS classes to the list box surrounds */
+        listBoxClass: 'md-whiteframe-1dp my-other-class',
+	/* this hides the buttons when not required */
+        hideSelectAllButtons: false 
 };	
 ```
 
