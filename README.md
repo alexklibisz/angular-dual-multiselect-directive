@@ -4,35 +4,35 @@
 **Disclaimer: I apologize but I can't help with any issues that you might have with the code. I haven't touched this code in about three years and haven't used Angular for about as long. It's a relatively small piece of code, so working through it yourself is likely a good exercise in understanding Angular 1.x.**
 ***
 
-###Filter, select, go!
+### Filter, select, go!
 The Angular Dual Multiselect Directive makes it easy to quickly create a pair of searchable fields for selecting multiple options from a large set of values.  
 
 ![Screenshot](https://raw.githubusercontent.com/alexklibisz/angular-dual-multiselect-directive/gh-pages/assets/demo.png)
 
 
-###Dependencies
+### Dependencies
 - AngularJS (angular.min.js) (tested with 1.3.13 and 1.4.0-beta.1)
 - Bootstrap (at least the CSS)
 
-###Demo
+### Demo
 - http://alexklibisz.github.io/angular-dual-multiselect-directive/
 - Source for this demo is in the gh-pages branch.
 - This directive is also implemented for a project I completed called MPMAP ![here](http://mpmap.mappingpiracy.net/#/map).
 
-###Usage
+### Usage
 
-####Include the CSS and JS files. Make sure Angular and your app.js files are included first.
+#### Include the CSS and JS files. Make sure Angular and your app.js files are included first.
 ```html
 <link rel="stylesheet" href="assets/dualmultiselect.css">
 <script src="assets/dualmultiselect.js"></script>
 ```
 
-####Add the directive tag in your HTML.
+#### Add the directive tag in your HTML.
 ```html
 <dualmultiselect options="demoOptions"> </dualmultiselect>
 ```
 
-####Add/customize this set of options as an object in your controller scope.
+#### Add/customize this set of options as an object in your controller scope.
 Note the comments for the last properties.
 ```js
 $scope.demoOptions = {
@@ -50,9 +50,9 @@ $scope.demoOptions = {
 };	
 ```
 
-####TODO
+#### TODO
 
 - Pressing enter key automatically moves the top item in the "all" pool over to the "selected" pool.
 
-####License
+#### License
 [WTFPL License](http://www.wtfpl.net/)
