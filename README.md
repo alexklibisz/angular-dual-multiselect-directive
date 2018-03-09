@@ -1,7 +1,10 @@
 # Angular Dual Multiselect Directive
 
+***
+**Disclaimer: I apologize but I can't help with any issues that you might have with the code. I haven't touched this code in about three years and haven't used Angular for about as long. It's a relatively small piece of code, so working through it yourself is likely a good exercise in understanding Angular 1.x.**
+***
 
-###*Filter, select, go!*
+###Filter, select, go!
 The Angular Dual Multiselect Directive makes it easy to quickly create a pair of searchable fields for selecting multiple options from a large set of values.  
 
 ![Screenshot](https://raw.githubusercontent.com/alexklibisz/angular-dual-multiselect-directive/gh-pages/assets/demo.png)
